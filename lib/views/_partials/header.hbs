@@ -1,0 +1,31 @@
+<header class="header-shadow">
+  <nav class="mui-container-fluid">
+    <table width="100%">
+      <tr style="vertical-align:middle;">
+        <td class="mui-appbar-height">
+          <div class="mui-text-headline mui-text-black">{{title}}</div>
+        </td>
+        <td class="mui-appbar-height" align="right">
+          {{#if user}}
+          <div class="mui-dropdown">
+            <a id="appbar-more-vert" data-mui-toggle="dropdown"><i class="fa fa-bars"></i></a>
+            <ul class="mui-dropdown-menu mui-dropdown-menu-right">
+              <li>
+                {{user.username}}
+              </li>
+              <li>
+                <a href="/integrations">Settings</a>
+              </li>
+              <li>
+                <a href="/session/destroy">Logout</a>
+              </li>
+            </ul>
+          </div>
+          {{else}}
+            <a class="mui-btn mui-btn-primary" href="/session/create">Login</a>
+          {{/if}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>

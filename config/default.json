@@ -1,0 +1,12 @@
+{
+  "hapi": {
+    "address": "localhost",
+    "port": "8080"
+  },
+  "Hoist": {
+    "apiKey": "abcdef",
+    "slack": {
+      "connectorKey": "slack-connector"
+    }
+  }
+}

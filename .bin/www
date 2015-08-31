@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+require('babel/register');
+var Server = require('../lib/server');
+var server = new Server();
+
+process.on('message', function (msg) {
+  if (msg === 'shutdown') {
+    process.nextTick(function () {
+      server.stop(function () {
+        console.log('server shutdown complete');
+        process.exit(0);
+      });
+    });
+    console.log('server shutdown initiated');
+  }
+});
+
+server.start();

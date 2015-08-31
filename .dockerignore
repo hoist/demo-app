@@ -1,0 +1,11 @@
+\.git
+\..*
+*\.sh
+*\.service
+build-scripts
+dockerfiles
+node_modules
+docker-compose.yml
+coverage
+circle.yml
+docs
