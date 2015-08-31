@@ -1,1 +1,25 @@
-This is the Hoist Demo Application
+This is the Hoist Demo Application <br/>
+{{#if user}}
+{{#if user.connected}}
+<form method="POST" action="/contact/new">
+  <legend>Add a contact</legend>
+  <div class="mui-form-group">
+    <input type="text" name="firstname" class="mui-form-control" placeholder="First Name">
+  </div>
+  <div class="mui-form-group">
+    <input type="text" name="lastname" class="mui-form-control" placeholder="Last Name">
+  </div>
+  <div class="mui-form-group">
+    <input type="email" name="email" class="mui-form-control" placeholder="email">
+  </div>
+  <div class="mui-form-group">
+    <input type="text" name="saleslead" class="mui-form-control" placeholder="saleslead">
+  </div>
+  <button type="submit" class="mui-btn mui-btn-default mui-btn-raised">Create Contact</button>
+</form>
+{{else}}
+<a class="mui-btn mui-btn-primary" href="/integrations/slack/connect">connect to slack</a>
+{{/if}}
+{{else}}
+<a class="mui-btn mui-btn-primary" href="/session/create">Login</a>
+{{/if}}
