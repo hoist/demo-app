@@ -1,18 +1,17 @@
 <header class="header-shadow">
-  <nav class="mui-container-fluid">
+  <nav class="mui-container-fluid" id="appbar">
     <table width="100%">
       <tr style="vertical-align:middle;">
         <td class="mui-appbar-height">
-          <div class="mui-text-headline mui-text-black">{{title}}</div>
+          {{!-- <div class="mui-text-headline mui-text-black">{{title}}</div> --}}
+          <a id="appbar-sidenav-show" class="mui-visible-xs-inline-block"><i class="icon-menu"></i></a>
+          <a class="appbar-brand" href="/docs/v1/getting-started">{{title}}</a>
         </td>
         <td class="mui-appbar-height" align="right">
           {{#if user}}
           <div class="mui-dropdown">
-            <a id="appbar-more-vert" data-mui-toggle="dropdown"><i class="fa fa-bars"></i></a>
+            <a id="appbar-more-vert" data-mui-toggle="dropdown"><i class="icon-more-vert"></i></a>
             <ul class="mui-dropdown-menu mui-dropdown-menu-right">
-              <li>
-                {{user.username}}
-              </li>
               <li>
                 <a href="/integrations">Settings</a>
               </li>
@@ -22,7 +21,7 @@
             </ul>
           </div>
           {{else}}
-            <a class="mui-btn mui-btn-primary" href="/session/create">Login</a>
+            
           {{/if}}
         </td>
       </tr>

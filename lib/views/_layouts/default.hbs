@@ -7,12 +7,37 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- load MUI -->
     <link href="//cdn.muicss.com/mui-0.1.21/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.muicss.com/static/cache/style.min-7675ac99.css" rel="stylesheet" type="text/css" />  
+    <style>
+      @font-face {
+        font-family: "icomoon";
+        src: url("/static/icomoon-84172218.eot");
+        src: url("/static/icomoon-84172218.eot#iefix") format('embedded-opentype'),
+             url("/static/icomoon-5b3fbc98.woff") format('woff'),
+             url("/static/icomoon-17a9c787.ttf") format('truetype'),
+             url("/static/icomoon-78487525.svg#icomoon") format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
     <script src="//cdn.muicss.com/mui-0.1.21/js/mui.min.js"></script>
   </head>
   <body>
-    <div class="mui-container-fluid">
-      {{>header}}
-      {{{content}}}
+    
+    {{>header}}
+
+    <div id="content-wrapper">
+      <div class="space-top"></div>
+      <div class="mui-container-fluid">
+        <div class="mui-row">
+          <div class="mui-col-sm-10 mui-col-sm-offset-1">
+
+            {{{content}}}
+
+          </div>
+        </div>
+      </div>
     </div>
+      
   </body>
 </html>
