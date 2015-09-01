@@ -16,6 +16,7 @@
     "hapi": "^9.0.3",
     "hapi-auth-cookie": "^3.1.0",
     "hapi-bunyan": "^0.6.0",
+    "hoist-node-sdk": "^1.0.3",
     "inert": "^3.0.1",
     "lodash": "^3.10.1",
     "poop": "^1.2.5",
